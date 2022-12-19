@@ -1,0 +1,62 @@
+/* 
+  Localizable.strings
+  Navigation_2
+
+ Created by Ibragim Assaibuldayev on 13.12.2022.
+  
+*/
+
+
+// MARK: Information of posts
+
+"elon_musk" = "Elon Musk";
+"dimash_kudaibergen" = "Dimash Kudaibergen";
+"concert_in_Moscow" = "Concert in Moscow";
+"launching_global_wi-fi" = "Launching_global_wi-fi";
+"motivation_sport" = "Motivation. Sport";
+"pushups_program" = "Push-ups program";
+"films" = "Films";
+"avatar_the_way_of_water" = "Avatar 2: The Way of Water";
+"football" = "Football";
+"chelsea_in_final" = "Chelsea in final";
+"travel" = "Travel";
+"switzerland" = "Switzerland";
+
+// MARK: Others
+
+"the_post_has_been_already_added" = "The post has been already added";
+"write_status" = "Write status";
+"show_status" = "Show status";
+"Ibragim" = "Ibragim";
+"close" = "Close";
+"login_or_email" = "Login or Email";
+"password" = "Password";
+"sign_in" = "Sign In";
+"sign_up" = "Sign Up";
+"password_limit" = "Password must be at least 4 characters";
+"incorrect_password" = "Wrong username and/or password!";
+"not_authorized" = "The user is not authorized. Please, Log In!";
+"success_registration" = "Registration was successful!";
+"back" = "Back";
+"gallery" = "Gallery";
+"something_is_wrong" = "Something is wrong";
+"double_click" = "Double click deletes post";
+"delete_all" = "Delete All";
+"try_again!" = "Try again!";
+"favourite_posts" = "Favourite posts";
+"deleting_post" = "Deleting a post";
+"want_delete_post" = "Do you want to delete the post?";
+"cancel" = "Cancel";
+"delete" = "Delete";
+"feed" = "Feed";
+"profile" = "Profile";
+"posts" = "Posts";
+"show_post" = "Show Post";
+"show_info" = "Show information";
+"information" = "Information";
+"message" = "Message";
+"please_click_one_of_the_options" = "Please click one of the options";
+"display_message" = "Display the message";
+"attention" = "Attention";
+"message_revealed" = "Message revealed";
+"photos" = "Photos";
