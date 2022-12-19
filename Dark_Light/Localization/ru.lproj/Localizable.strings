@@ -1,0 +1,64 @@
+/* 
+  Localizable.strings
+  Navigation_2
+
+  Created by Ibragim Assaibuldayev on 13.12.2022.
+  
+*/
+
+
+
+
+// MARK: Information of posts
+
+"elon_usk" = "Илон Маск";
+"dimash_kudaibergen" = "Димаш Куйдайберген";
+"concert_in_moscow" = "Концерт в Москве";
+"launching_global_wi-fi" = "Подключение глобального Wi-Fi";
+"motivation_sport" = "Мотивация. Спорт";
+"pushups_program" = "Программа отжиманий";
+"films" = "Фильмы";
+"avatar_the_way_of_water" = "Аватар 2: Путь воды";
+"football" = "Футбол";
+"chelsea_in_final" = "Челси в финале";
+"travel" = "Путешествия";
+"switzerland" = "Щвейцария";
+
+
+// MARK: Others
+
+"the_post_has_been_already_added" = "Пост уже был добавлен";
+"write_status" = "Напишите статус";
+"show_status" = "Показать статус";
+"Ibragim" = "Ибрагим";
+"close" = "Закрыть";
+"login_or_email" = "Логин или Электронная почта";
+"password" = "Пароль";
+"sign_in" = "Вход";
+"sign_up" = "Регистрация";
+"password_limit" = "Пароль должен быть не меньше 4 символов";
+"incorrect_password" = "Неправильный логин и/или пароль!";
+"not_authorized" = "Пользователь не авторизован. Пожалуйста, авторизуйтесь!";
+"success_registration" = "Регистрация прошла успешна!";
+"back" = "Назад";
+"gallery" = "Галерея";
+"something_is_wrong" = "Что-то пошло не так";
+"double_click" = "2-ое нажатие удаляет пост";
+"delete_all" = "Удалить все";
+"favourite_posts" = "Любимые посты";
+"deleting_post" = "Удаление поста";
+"want_delete_post" = "Вы хотите удалить пост?";
+"cancel" = "Отмена";
+"feed" = "Лента пользователя";
+"profile" = "Профиль";
+"posts" = "Посты";
+"try_again!" = "Попробуйте снова!";
+"show_post" = "Показать пост";
+"show_info" = "Показать информацию";
+"information" = "Информация";
+"message" = "Сообщение";
+"please_click_one_of_the_options" = "Прошу нажать один из вариантов";
+"display_message" = "Вывести сообщение";
+"attention" = "Внимание";
+"message_revealed" = "Сообщение выявлено";
+"photos" = "Фотографии";
