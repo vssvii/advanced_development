@@ -1,0 +1,62 @@
+/* 
+  Localizable.strings
+  Navigation_2
+
+ Created by Ibragim Assaibuldayev on 13.12.2022.
+  
+*/
+
+
+// MARK: Information of posts
+
+"elon_usk" = "Elon Mask";
+"dimash_kudaibergen" = "Dımash Qudaıbergen";
+"concert_in_moscow" = "Máskeýdegi konsert";
+"launching_global_wi-fi" = "Jahandyq Wi-Fi qosylymy";
+"motivation_sport" = "Motıvasıa. Sport";
+"pushups_program" = "Iterý baǵdarlamasy";
+"films" = "Fılmder";
+"avatar_the_way_of_water" = "Avatar 2: sý joly";
+"football" = "Fýtbol";
+"chelsea_in_final" = "Chelsı fınalda";
+"travel" = "Saıahat";
+"switzerland" = "Shveısarıa";
+
+
+// MARK: Others
+
+"the_post_has_been_already_added" = "Post qazirdiń ózinde qosyldy";
+"write_status" = "Kúı jazyńyz";
+"show_status" = "Kúıdi kórsetý";
+"Ibragim" = "Ibragim";
+"close" = "Jabý";
+"login_or_email" = "Logın nemese elektrondyq poshta";
+"password" = "Qupıa sóz";
+"sign_in" = "Kirý";
+"sign_up" = "Tirkeý";
+"password_limit" = "Qupıa sóz kem degende 4 tańbadan turýy kerek";
+"incorrect_password" = "Logın jáne/nemese qupıa sóz durys emes!";
+"not_authorized" = "Paıdalanýshy ruqsat etilmegen. Ótinemin, kirińiz!";
+"success_registration" = "Tirkeý sátti ótti!";
+"back" = "Artqa";
+"gallery" = "Galereıa";
+"something_is_wrong" = "Birdeńe durys bolmady";
+"double_click" = "2-shi basý jazbany joıady";
+"delete_all" = "Barlyǵyn joıý";
+"favourite_posts" = "Súıikti jazbalar";
+"deleting_post" = "Jazbany joıý";
+"want_delete_post" = "Siz jazbany joıǵyńyz kele me?";
+"cancel" = "Bas tartý";
+"feed" = "Paıdalanýshy taspasy";
+"profile" = "Profıl";
+"posts" = "Posttar";
+"try_again!" = "Qaıtalap kórińiz!";
+"show_post" = "Postty kórsetý";
+"show_info" = "Aqparatty kórsetý";
+"information" = "Aqparat";
+"message" = "Habar";
+"please_click_one_of_the_options" = "Opsıalardyń birin basýyńyzdy suraımyn";
+"display_message" = "Habardy shyǵarý";
+"attention" = "Nazar aýdaryńyz";
+"message_revealed" = "Habarlama anyqtaldy";
+"photos" = "Fotosýretter";
