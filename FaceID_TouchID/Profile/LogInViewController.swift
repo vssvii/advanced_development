@@ -26,6 +26,8 @@ class LogInViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
     
+    private let biometricIDAuth = LocalAuthorizationService()
+    
     init(with delegate: LoginViewControllerDelegate) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
@@ -150,6 +152,75 @@ class LogInViewController: UIViewController {
         return checkInLabel
     }()
     
+    private lazy var anotherMethodLabel: UILabel = {
+        let anotherMethodLabel = UILabel()
+        anotherMethodLabel.text = "или"
+        return anotherMethodLabel
+    }()
+    
+    private lazy var verifyMethodButton : UIButton = {
+        let verifyMethodButton = UIButton()
+        verifyMethodButton.setTitle(" Использовать FaceID/ TouchID", for: .normal)
+        verifyMethodButton.setTitleColor(.systemBlue, for: .normal)
+        verifyMethodButton.setImage(
+            UIImage(systemName: "faceid"),
+            for: .normal)
+        verifyMethodButton.addTarget(self, action: #selector(checkBiometricMethod), for: .touchUpInside)
+        return verifyMethodButton
+    }()
+    
+    @objc func checkBiometricMethod() {
+        biometricIDAuth.authorizeIfPossible { (canEvaluate, _, canEvaluateError) in
+            guard canEvaluate else {
+                alert(
+                    title: "Ошибка",
+                    message: canEvaluateError?.localizedDescription ?? "Face ID/Touch ID не настроен",
+                    okActionTitle: "OK"
+                )
+                return
+            }
+            
+            biometricIDAuth.authorizationFinished { [weak self] (success, error) in
+                guard success else {
+                    self?.alert(
+                        title: "Ошибка",
+                        message: error?.localizedDescription ?? "Face ID/Touch ID не настроен",
+                        okActionTitle: "ОК")
+                    return
+                }
+                
+                #if DEBUG
+                let logInProfile = ProfileViewController(userService: CurrentUserService(name: self?.login.text ?? "", avatar: "", status: "") as UserService, userName: self?.login.text ?? "")
+                self?.navigationController?.pushViewController(logInProfile, animated: true)
+                #else
+                let logInProfile = ProfileViewController(userService: TestUserService(name: self?.login.text ?? "", avatar: "", status: "") as UserService, userName: self?.login.text ?? "")
+                self?.navigationController?.pushViewController(logInProfile, animated: true)
+                #endif
+            }
+        }
+    }
+    
+    func alert(
+        title: String,
+        message: String,
+        okActionTitle: String
+    ) {
+        let alertView = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(
+            title: okActionTitle,
+            style: .default
+        )
+        alertView.addAction(okAction)
+        present(
+            alertView,
+            animated: true
+        )
+    }
+    
     func presentAlert(title: String? = nil, message: String? = nil, completion: (Callback)? = nil) {
         let title = title ?? "try_again!".localized
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -239,6 +310,8 @@ class LogInViewController: UIViewController {
         contentView.addSubview(signInButton)
         contentView.addSubview(signUpButton)
         contentView.addSubview(checkInLabel)
+        contentView.addSubview(anotherMethodLabel)
+        contentView.addSubview(verifyMethodButton)
         
         scrollView.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
@@ -293,6 +366,17 @@ class LogInViewController: UIViewController {
             make.centerX.equalTo(contentView)
             make.height.equalTo(30)
         }
+        
+        anotherMethodLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(checkInLabel.snp.bottom).offset(16)
+            make.centerX.equalTo(contentView)
+            make.height.equalTo(30)
+        }
+        verifyMethodButton.snp.makeConstraints { (make) in
+            make.top.equalTo(anotherMethodLabel.snp.bottom).offset(16)
+            make.centerX.equalTo(contentView)
+            make.height.equalTo(16)
+        }
     }
 
     
@@ -306,7 +390,6 @@ class LogInViewController: UIViewController {
         setupLayout()
         
         isAuthorized()
-        print(realm.configuration.fileURL)
         
     }
     
