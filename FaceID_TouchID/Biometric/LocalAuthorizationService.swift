@@ -8,8 +8,6 @@
 import Foundation
 import LocalAuthentication
 
-//Build input file cannot be found: '/Users/Developer/Library/Developer/Xcode/DerivedData/Navigation_2-ewnpvboewebvdmaqvxxzxqortebw/Build/Products/Release-iphoneos/SnapKit/SnapKit.framework/SnapKit'. Did you forget to declare this file as an output of a script phase or custom build rule which produces it?
-
 
 class LocalAuthorizationService {
     enum BiometricType {
